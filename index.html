@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Creative Portfolio</title>
+  
+  
+</head>
+<body>
+
+<style>
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #4a4e69;
+  padding: 15px 30px;
+  z-index: 10;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ff9a8b;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #6d7f7e;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  position: relative;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-card {
+  background: #f0e6f6;
+  color: #333;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+}
+
+.about-card p {
+  font-size: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  background: #f9f9f9;
+  color: #333;
+  padding: 20px;
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project h3 {
+  margin-top: 15px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+form input,
+form textarea {
+  padding: 15px;
+  width: 80%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+form button {
+  padding: 15px 30px;
+  background-color: #4a4e69;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #ff9a8b;
+  transition: background 0.3s ease;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.social-icon {
+  display: inline-block;
+  margin-left: 15px;
+  color: #4267B2;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #3b5998;
+}
+}
+
+  </style>
+
+
+  <!-- Navigation Bar -->
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Hero Section (Intro) -->
+  <header id="home">
+    <div class="hero">
+      <img src=https://scontent.fmnl3-1.fna.fbcdn.net/v/t1.15752-9/494819569_2020720915118646_54299463555677035_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeF1xwctR72KO3akQ73ICslrH2n57irk0xEfafnuKuTTEexrI9hKoSUqSJ9XHdNb7KFVtxgDp7ijNC6OpvA2MSWv&_nc_ohc=AjpAV45oN1sQ7kNvwGrqs1z&_nc_oc=AdlYeOkO8Sf5zRQdAqm30yrZgul9hFtr9DAwF-r4ZF9QPIzy4nlPV5ksdCFZbuqx4Uo&_nc_ad=z-m&_nc_cid=1119&_nc_zt=23&_nc_ht=scontent.fmnl3-1.fna&oh=03_Q7cD2QHyYm68iyA-7h3fg-p2uZqOZGJ7pKvg_tZebKU-ZrsrgQ&oe=68455B0B alt="Your Picture" class="profile-pic" />
+      <div class="intro">
+        <h1>Hello, I'm Dennis!</h1>
+        <p>I’m a newbie web developer with a passion for design and technology.</p>
+        <p>Skills: HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I'm a web developer who enjoys building clean, functional websites that provide a smooth user experience. I focus on detail, creativity, and simplicity. I am someone who has a deep passion for everything related to motors, whether it's cars, motorcycles, or any other kind of motorized vehicles. I appreciate the engineering, the speed, and the craftsmanship that goes into building high-performance machines. I might spend hours learning about the latest in automotive technology, tuning engines, or even attending car shows and races. My enthusiasm for motors is not just a hobby—it’s a lifestyle that I love to share with others who understand the thrill of the road or track. </p>
+    <div class="about-cards">
+      <div class="about-card">
+        <h3>Education</h3>
+        <p>BS in Information Technology</p>
+      </div>
+      <div class="about-card">
+        <h3>Experience</h3>
+        <p>Simple and basic experiences about coding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <h2>My Interest</h2>
+    <div class="projects">
+      <div class="project">
+        <img src=https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/484869760_122234894936209932_4955570542101603055_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFUrCXti3L3ebLVwLs78CPwcV3YQPYF7vVxXdhA9gXu9Q2I7rf2wX6eltQH8H9Q7iGjrSSVnr5mTi0b59IXdJ3v&_nc_ohc=eadWqVN0FBgQ7kNvwGXpQUq&_nc_oc=AdlGzS8Lhl3mWfMlRyOnOOa52oPkSme8aPwrmlQzS5MITivf1SW-3VEMBPxnD2tfwGo&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&_nc_gid=BYEbOjAbfNutm27aQ9NuMg&oh=00_AfLeT5s8jxbZ8HQdV8Z97fou6X_0FuO10jyAHGgcyntgOw&oe=68239368  alt="Project 1" />
+        <h3>Motorcycle</h3>
+        <p>My love for motorcycles likely adds an exciting layer to my identity as a motor enthusiast. Whether it's the freedom of the open road, the roar of the engine, or the precision of the ride, motorcycles have a way of turning every trip into an adventure.</p>
+      </div>
+      <div class="project">
+        <img src=data:image/jpeg;base64,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 == alt="Project 2" />
+        <h3>Basketball</h3>
+        <p>I also love playing basketball especially basketball is a great mix of strategy, athleticism, and teamwork. Whether you're hitting threes, driving to the hoop, or just enjoying a pickup game with friends, it's a sport that keeps both the body and mind sharp</p>
+      </div>
+      <div class="project">
+        <img src=https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/469258429_1245418723401159_2481351860728923895_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeExrd38ypX9svZ7tc4-XP3mCUqfKP0OAhgJSp8o_Q4CGMsVdnJ25Z7OW28wGsz62ZqCkANaRb8_9IQjWpTUzddL&_nc_ohc=yXwdnNI-EL4Q7kNvwFQN2go&_nc_oc=AdlPDoTGsbB_S2n3-DjCsdDfnlZFEV-VM3Pqal2ehz5CCSJ0vL9SPub_MwGgREyu82w&_nc_zt=23&_nc_ht=scontent.fmnl37-2.fna&_nc_gid=Nj-sZzLi5iJy7T2XRG7HSQ&oh=00_AfIpSy-PvgmI8iWW031c10YE2ZSj15fgCzQqXg7Myy6sDQ&oe=68239CBD alt="Project 3" />
+        <h3>My Family</h3>
+        <p>I come from a close-knit family made up of your mother, father, and a younger sister. My parents provide a strong foundation, and your sister adds a dynamic energy to the household. Whether it's supporting each other through challenges or sharing everyday moments, my family plays an important role in shaping who I am.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <h2>Porfolio</h2>
+    <div class="projects">
+      <div class="project">
+        <img src=https://scontent.fmnl7-1.fna.fbcdn.net/v/t1.15752-9/494823001_1365408714742725_5467452947002541456_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGD25iqbP-a5N1ZH_24-221rpRXrnQlpBKulFeudCWkEoAGlBXZnKgmdqNJciVs8v3enZrsgNYt5ttB37I03h6w&_nc_ohc=9QROGoUQBL4Q7kNvwHww1p0&_nc_oc=AdnmDYV_MIQTI34YdTIEL_xwOIHQJ1b9vinqAEYeIZ_8H0zRBJy0lqYMfpcpJ9m4zqw&_nc_ad=z-m&_nc_cid=1119&_nc_zt=23&_nc_ht=scontent.fmnl7-1.fna&oh=03_Q7cD2QHx8QFL_JBWgF1po-LkBggsItMl1Y3ji1tRl8d35gTEFA&oe=68456796 alt="Project 1" />
+        <h3>Introduction to Javascript</h3>
+        <p>This will add interactivity and enhance the user experience with simple dynamic behavior like a responsive navbar toggle (for mobile), a smooth scroll to sections, and an animated typewriter effect in your hero intro.</p>
+      </div>
+      <div class="project">
+        <img src=https://scontent.fmnl7-1.fna.fbcdn.net/v/t1.15752-9/494828290_1744506043129969_8743309628186556762_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFcTiuGe34qBtvhJ_GhLGJ5vT9FOBMx9Pe9P0U4EzH096kfAJI-dq5HsFUWdmm3dgH6J8kfuQx-2y6pRKVmurGC&_nc_ohc=ScVOLExq7QcQ7kNvwGC5hdG&_nc_oc=AdnIccAYLfDTB4kcHXNlZPomXjFoG5WhBX5akMj8cUGgADsLitb8C9N8mdzJU7DHIhk&_nc_ad=z-m&_nc_cid=1119&_nc_zt=23&_nc_ht=scontent.fmnl7-1.fna&oh=03_Q7cD2QH3G0NHlzxYIN5gFnGajlthlI9GYSk03nLgfLwZV-OVYA&oe=68456BD6 == alt="Project 2" />
+        <h3>Introduction to HTML</h3>
+        <p>This sets up the basic structure and includes semantic HTML elements for accessibility and good SEO practices.</p>
+      </div>
+      <div class="project">
+        <img src=https://scontent.fmnl7-1.fna.fbcdn.net/v/t1.15752-9/494817651_1269218528063820_8846591775052555202_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGb7YmovYsjs4SHtvHtfY2quX8wGDwbnOe5fzAYPBuc5x_4jfxS6i_wFqlV5whMqJ5UKf8GcibsbY468OmgaVAR&_nc_ohc=rQJuGMctpHcQ7kNvwHmuqXr&_nc_oc=AdlbcJxAy1diUUbNp1RQF6J52cCjv-QewOetKOTi18Ivc9-O-AnBUWWYsMHQraSYB7Q&_nc_ad=z-m&_nc_cid=1119&_nc_zt=23&_nc_ht=scontent.fmnl7-1.fna&oh=03_Q7cD2QHE5aezljVkD6pSVPj3CVB29naQspfKP8pgUKKbuxS2wQ&oe=68456BC7 alt="Project 3" />
+        <h3>Introduction to CSS</h3>
+        <p>This will give your site a clean, modern look, including responsive layouts for the navbar, hero section, about cards, and portfolio project grid.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Created by Dennis Kat | &copy; 2025</p>
+  </footer>
+
+
+</body>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form from submitting
+
+  // Get the form inputs
+  const name = document.querySelector('input[name="name"]');
+  const email = document.querySelector('input[name="email"]');
+  const message = document.querySelector('textarea[name="message"]');
+  const formMessage = document.getElementById('formMessage');
+
+  // Check if all fields are filled out
+  if (name.value === '' || email.value === '' || message.value === '') {
+    formMessage.textContent = 'Please fill in all fields.';
+    formMessage.style.color = 'red';
+  } else {
+    formMessage.textContent = 'Thank you for your message!';
+    formMessage.style.color = 'green';
+  }
+});
+
+  </script>
+
+</html>
